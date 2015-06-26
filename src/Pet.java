@@ -22,4 +22,8 @@ public class Pet {
     public String getTypeOfPet() {
         return typeOfPet.toString();
     }
+
+    public String getPetAbility() {
+        return typeOfPet.petAbility();
+    }
 }

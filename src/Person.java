@@ -29,7 +29,8 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Name of person: " +personName +" // Type of Pet: " +personPet.getTypeOfPet() +" / Name of Pet: " +personPet.getPetName();
+        return "Name of person: " +personName +" // Name of Pet: " +personPet.getPetName()  +
+                " / Type of Pet: " +personPet.getTypeOfPet() +" / Pet ability is " +personPet.getPetAbility() ;
     }
 
 }
