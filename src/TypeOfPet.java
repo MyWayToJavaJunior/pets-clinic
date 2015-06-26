@@ -13,7 +13,7 @@ public enum TypeOfPet {
         this.PET_ABILITY = PET_ABILITY;
     }
 
-    public String petAbility() {
+    String petAbility() {
         return PET_ABILITY;
     }
 }
