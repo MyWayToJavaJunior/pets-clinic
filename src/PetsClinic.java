@@ -134,6 +134,10 @@ public class PetsClinic {
         for (int i = 0; i < persons.size(); i++) {
             if (personName.equals(persons.get(i).getPersonName())) {
                 String newPersonName = getStringFromKeyb("Enter a new Person name");
+                if (isPersonAlreadyExists(newPersonName)) {
+                    System.out.println("Person with name " +newPersonName +", already exists");
+                    return;
+                }
                 persons.get(i).setPersonName(newPersonName);
                 System.out.println("Person rename successfully");
                 return;
@@ -158,7 +162,7 @@ public class PetsClinic {
     public static boolean isPersonAlreadyExists(String personName) {
         boolean result = false;
         for (int i = 0; i < persons.size(); i++) {
-            if (personName.equals(persons.get(i).getPersonName())) {
+            if (personName.equals(persons.get(i).getPersonName().toLowerCase())) {
                 result = true;
             }
         }
